@@ -7,5 +7,5 @@ target 'TestCellDemo' do
 
   # Pods for TestCellDemo
 pod 'Masonry'
-
+pod 'IQKeyboardManager'
 end
