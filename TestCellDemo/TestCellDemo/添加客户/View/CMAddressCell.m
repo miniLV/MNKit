@@ -65,6 +65,8 @@
     _addressTextView.tag = tag;
     _titleLabel.text = basicModel.titleLabel;
     _addressTextView.text = basicModel.textFieldValue;
+    NSLog(@"_addressTextView.text = %@",_addressTextView.text);
+    
 //    _addressTextView.text = @"setModel";
     
 }

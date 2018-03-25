@@ -80,8 +80,8 @@ CMAddCustomerDelegate
     NSInteger row = sender.tag % 100;
     LFbasicCellModel *model = _datas[section][row];
     model.textFieldValue = sender.text;
-//    kRefreshTableView(_tableView, row, section);
-    [_tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [_tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [_tableView reloadData];
 }
 
 - (void)endEditTextField:(UITextField *)sender{
