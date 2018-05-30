@@ -52,7 +52,8 @@ UITableViewDataSource
 #pragma mark - loadDatas
 - (void)loadDatas{
     
-    self.datas = @[@"Demo1 - MNButton"];
+    self.datas = @[@"Demo1 - MNButton",
+                   @"Demo2 - MNLabel"];
     [_tableView reloadData];
 }
 

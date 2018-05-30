@@ -26,6 +26,9 @@
 		A7D73EE920BD96F100BD0DC3 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EDE20BD96F100BD0DC3 /* MASViewAttribute.m */; };
 		A7D73EEA20BD96F100BD0DC3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7D73EDF20BD96F100BD0DC3 /* Info.plist */; };
 		A7D73EEE20BD973900BD0DC3 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EED20BD973900BD0DC3 /* Demo1ViewController.m */; };
+		A7D73EF120BED6AB00BD0DC3 /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF020BED6AB00BD0DC3 /* Demo2ViewController.m */; };
+		A7D73EF420BED6DC00BD0DC3 /* MNLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */; };
+		A7D73EF720BED72800BD0DC3 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,12 @@
 		A7D73EDF20BD96F100BD0DC3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D73EEC20BD973900BD0DC3 /* Demo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		A7D73EED20BD973900BD0DC3 /* Demo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
+		A7D73EEF20BED6AB00BD0DC3 /* Demo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2ViewController.h; sourceTree = "<group>"; };
+		A7D73EF020BED6AB00BD0DC3 /* Demo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2ViewController.m; sourceTree = "<group>"; };
+		A7D73EF220BED6DC00BD0DC3 /* MNLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNLabel.h; sourceTree = "<group>"; };
+		A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNLabel.m; sourceTree = "<group>"; };
+		A7D73EF520BED72800BD0DC3 /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
+		A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,10 @@
 		A7D73EBF20BD939B00BD0DC3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7D73EF520BED72800BD0DC3 /* UILabel+Utils.h */,
+				A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */,
+				A7D73EF220BED6DC00BD0DC3 /* MNLabel.h */,
+				A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */,
 				A7D73EC120BD941700BD0DC3 /* MNButton.h */,
 				A7D73EC220BD941700BD0DC3 /* MNButton.m */,
 			);
@@ -188,6 +201,8 @@
 			children = (
 				A7D73EEC20BD973900BD0DC3 /* Demo1ViewController.h */,
 				A7D73EED20BD973900BD0DC3 /* Demo1ViewController.m */,
+				A7D73EEF20BED6AB00BD0DC3 /* Demo2ViewController.h */,
+				A7D73EF020BED6AB00BD0DC3 /* Demo2ViewController.m */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -263,12 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D73EF720BED72800BD0DC3 /* UILabel+Utils.m in Sources */,
 				A7D73EE820BD96F100BD0DC3 /* MASViewConstraint.m in Sources */,
 				A7D73EE920BD96F100BD0DC3 /* MASViewAttribute.m in Sources */,
 				A7D73EC320BD941700BD0DC3 /* MNButton.m in Sources */,
+				A7D73EF420BED6DC00BD0DC3 /* MNLabel.m in Sources */,
 				A7D73EAD20BD937300BD0DC3 /* ViewController.m in Sources */,
 				A7D73EE520BD96F100BD0DC3 /* NSArray+MASAdditions.m in Sources */,
 				A7D73EE120BD96F100BD0DC3 /* ViewController+MASAdditions.m in Sources */,
+				A7D73EF120BED6AB00BD0DC3 /* Demo2ViewController.m in Sources */,
 				A7D73EE220BD96F100BD0DC3 /* MASCompositeConstraint.m in Sources */,
 				A7D73EEE20BD973900BD0DC3 /* Demo1ViewController.m in Sources */,
 				A7D73EB820BD937400BD0DC3 /* main.m in Sources */,

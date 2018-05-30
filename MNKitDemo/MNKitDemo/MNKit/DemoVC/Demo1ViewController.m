@@ -28,6 +28,17 @@
 - (void)setupUI{
     
     //1.一句代码设置 - 按钮标题 && 颜色 && 字号 && 父试图 && 响应方法
+    
+    /** --等价于这些设置
+    UIButton *btn = [[UIButton alloc]init];
+    [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor lightGrayColor]];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(clickSendBtn) forControlEvents:UIControlEventTouchUpInside];
+     */
+    
     MNButton *sendBtn = [MNButton buttonWithTitle:@"获取验证码"
                                        titleColor:[UIColor orangeColor]
                                          fontSize:[UIFont systemFontOfSize:14]
