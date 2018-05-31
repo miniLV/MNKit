@@ -53,7 +53,8 @@ UITableViewDataSource
 - (void)loadDatas{
     
     self.datas = @[@"Demo1 - MNButton",
-                   @"Demo2 - MNLabel"];
+                   @"Demo2 - MNLabel",
+                   @"Demo3 - UIImage+Original"];
     [_tableView reloadData];
 }
 

@@ -29,6 +29,8 @@
 		A7D73EF120BED6AB00BD0DC3 /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF020BED6AB00BD0DC3 /* Demo2ViewController.m */; };
 		A7D73EF420BED6DC00BD0DC3 /* MNLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */; };
 		A7D73EF720BED72800BD0DC3 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */; };
+		A7D73EFA20C02F0D00BD0DC3 /* UIImage+Original.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EF920C02F0D00BD0DC3 /* UIImage+Original.m */; };
+		A7D73EFD20C02F7B00BD0DC3 /* Demo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EFC20C02F7B00BD0DC3 /* Demo3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,10 @@
 		A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNLabel.m; sourceTree = "<group>"; };
 		A7D73EF520BED72800BD0DC3 /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
+		A7D73EF820C02F0D00BD0DC3 /* UIImage+Original.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Original.h"; sourceTree = "<group>"; };
+		A7D73EF920C02F0D00BD0DC3 /* UIImage+Original.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Original.m"; sourceTree = "<group>"; };
+		A7D73EFB20C02F7B00BD0DC3 /* Demo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo3ViewController.h; sourceTree = "<group>"; };
+		A7D73EFC20C02F7B00BD0DC3 /* Demo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo3ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 		A7D73EBF20BD939B00BD0DC3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7D73EF820C02F0D00BD0DC3 /* UIImage+Original.h */,
+				A7D73EF920C02F0D00BD0DC3 /* UIImage+Original.m */,
 				A7D73EF520BED72800BD0DC3 /* UILabel+Utils.h */,
 				A7D73EF620BED72800BD0DC3 /* UILabel+Utils.m */,
 				A7D73EF220BED6DC00BD0DC3 /* MNLabel.h */,
@@ -203,6 +211,8 @@
 				A7D73EED20BD973900BD0DC3 /* Demo1ViewController.m */,
 				A7D73EEF20BED6AB00BD0DC3 /* Demo2ViewController.h */,
 				A7D73EF020BED6AB00BD0DC3 /* Demo2ViewController.m */,
+				A7D73EFB20C02F7B00BD0DC3 /* Demo3ViewController.h */,
+				A7D73EFC20C02F7B00BD0DC3 /* Demo3ViewController.m */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -294,8 +304,10 @@
 				A7D73EE320BD96F100BD0DC3 /* MASConstraintMaker.m in Sources */,
 				A7D73EE720BD96F100BD0DC3 /* MASConstraint.m in Sources */,
 				A7D73EE020BD96F100BD0DC3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				A7D73EFA20C02F0D00BD0DC3 /* UIImage+Original.m in Sources */,
 				A7D73EE420BD96F100BD0DC3 /* MASLayoutConstraint.m in Sources */,
 				A7D73EAA20BD937300BD0DC3 /* AppDelegate.m in Sources */,
+				A7D73EFD20C02F7B00BD0DC3 /* Demo3ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,16 +447,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZ676PQ4PL;
+				DEVELOPMENT_TEAM = YB959EVT9H;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MNKitDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MNKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,16 +467,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZ676PQ4PL;
+				DEVELOPMENT_TEAM = YB959EVT9H;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MNKitDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MNKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
