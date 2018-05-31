@@ -7,7 +7,7 @@
 //
 
 #import "Demo3ViewController.h"
-
+#import "UIImage+Original.h"
 @interface Demo3ViewController ()
 
 @end
@@ -24,11 +24,17 @@
 
 - (void)setupUI{
     
-    //普通button
-    UIButton *btn = [[UIButton alloc]init];
-    btn.frame = CGRectMake(100, 100, 100, 50);
-    [btn setBackgroundImage:[UIImage imageNamed:@"退出登录"] forState:UIControlStateNormal];
+    //button 渲染图片
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn setImage:[UIImage imageNamed:@"身份证相机"] forState:UIControlStateNormal];
     [self.view addSubview:btn];
+    
+    //button - 显示原图
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn2.frame = CGRectMake(100, 300, 100, 100);
+    [btn2 setImage:[UIImage imageNamedWithRenderOriginal:@"身份证相机"] forState:UIControlStateNormal];
+    [self.view addSubview:btn2];
 }
 
 @end
