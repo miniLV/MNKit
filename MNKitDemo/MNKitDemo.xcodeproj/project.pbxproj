@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		A72BA54F20C03C64005073B9 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA54920C03C64005073B9 /* SVIndefiniteAnimatedView.m */; };
 		A72BA55020C03C64005073B9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A72BA54A20C03C64005073B9 /* SVProgressHUD.bundle */; };
 		A72BA55320C03D37005073B9 /* MNSVProgressClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA55220C03D37005073B9 /* MNSVProgressClass.m */; };
+		A7A7379E20D002600049FEF1 /* UIView+MNFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */; };
 		A7D73EAA20BD937300BD0DC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EA920BD937300BD0DC3 /* AppDelegate.m */; };
 		A7D73EAD20BD937300BD0DC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EAC20BD937300BD0DC3 /* ViewController.m */; };
 		A7D73EB020BD937300BD0DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D73EAE20BD937300BD0DC3 /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		A72BA54B20C03C64005073B9 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		A72BA55120C03D36005073B9 /* MNSVProgressClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNSVProgressClass.h; sourceTree = "<group>"; };
 		A72BA55220C03D37005073B9 /* MNSVProgressClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNSVProgressClass.m; sourceTree = "<group>"; };
+		A7A7379C20D002600049FEF1 /* UIView+MNFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MNFrame.h"; sourceTree = "<group>"; };
+		A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MNFrame.m"; sourceTree = "<group>"; };
 		A7D73EA520BD937300BD0DC3 /* MNKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D73EA820BD937300BD0DC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7D73EA920BD937300BD0DC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				A7D73EF320BED6DC00BD0DC3 /* MNLabel.m */,
 				A7D73EC120BD941700BD0DC3 /* MNButton.h */,
 				A7D73EC220BD941700BD0DC3 /* MNButton.m */,
+				A7A7379C20D002600049FEF1 /* UIView+MNFrame.h */,
+				A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -301,11 +306,12 @@
 				TargetAttributes = {
 					A7D73EA420BD937300BD0DC3 = {
 						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = A7D73EA020BD937300BD0DC3 /* Build configuration list for PBXProject "MNKitDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -366,6 +372,7 @@
 				A72BA54F20C03C64005073B9 /* SVIndefiniteAnimatedView.m in Sources */,
 				A7D73EFA20C02F0D00BD0DC3 /* UIImage+Original.m in Sources */,
 				A72BA54C20C03C64005073B9 /* SVRadialGradientLayer.m in Sources */,
+				A7A7379E20D002600049FEF1 /* UIView+MNFrame.m in Sources */,
 				A7D73EE420BD96F100BD0DC3 /* MASLayoutConstraint.m in Sources */,
 				A72BA54020C03919005073B9 /* Demo4ViewController.m in Sources */,
 				A7D73EAA20BD937300BD0DC3 /* AppDelegate.m in Sources */,
@@ -514,10 +521,7 @@
 				DEVELOPMENT_TEAM = YB959EVT9H;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MNKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -534,10 +538,7 @@
 				DEVELOPMENT_TEAM = YB959EVT9H;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MNKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
