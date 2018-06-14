@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SVProgressHUD.h"
+
 @interface MNSVProgressClass : NSObject
 
 + (void)mn_dismiss;

@@ -64,6 +64,7 @@
 		A72BA55220C03D37005073B9 /* MNSVProgressClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNSVProgressClass.m; sourceTree = "<group>"; };
 		A7A7379C20D002600049FEF1 /* UIView+MNFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MNFrame.h"; sourceTree = "<group>"; };
 		A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MNFrame.m"; sourceTree = "<group>"; };
+		A7A7379F20D250F30049FEF1 /* MNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNKit.h; sourceTree = "<group>"; };
 		A7D73EA520BD937300BD0DC3 /* MNKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D73EA820BD937300BD0DC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7D73EA920BD937300BD0DC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 			children = (
 				A7D73EC020BD939B00BD0DC3 /* Foundation */,
 				A7D73EBF20BD939B00BD0DC3 /* UIKit */,
+				A7A7379F20D250F30049FEF1 /* MNKit.h */,
 			);
 			path = MNKit;
 			sourceTree = "<group>";

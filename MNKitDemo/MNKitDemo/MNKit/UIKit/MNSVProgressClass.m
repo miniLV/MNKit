@@ -53,20 +53,6 @@
 + (void)longTimeSetting{
 
     [self longTimeSettingWithTouch:NO];
-    //    //设置标题颜色
-//    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-//
-//    //设置背景色
-//    [SVProgressHUD setBackgroundColor:HZ_888888Color];
-//
-//    //1.5s后消失
-////    [SVProgressHUD dismissWithDelay:10];
-//
-//    //消失动画(1S)
-//    [SVProgressHUD setFadeOutAnimationDuration:1.0];
-//
-//    //禁止用户交互
-//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 + (void)longTimeSettingWithTouch:(BOOL)canTouch{
@@ -75,9 +61,6 @@
     
     //设置背景色
     [SVProgressHUD setBackgroundColor:[UIColor darkGrayColor]];
-    
-    //1.5s后消失
-    //    [SVProgressHUD dismissWithDelay:10];
     
     //消失动画(1S)
     [SVProgressHUD setFadeOutAnimationDuration:1.0];
