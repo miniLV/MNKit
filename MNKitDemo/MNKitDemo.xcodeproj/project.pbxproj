@@ -17,6 +17,7 @@
 		A72BA55020C03C64005073B9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A72BA54A20C03C64005073B9 /* SVProgressHUD.bundle */; };
 		A72BA55320C03D37005073B9 /* MNSVProgressClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA55220C03D37005073B9 /* MNSVProgressClass.m */; };
 		A7A7379E20D002600049FEF1 /* UIView+MNFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */; };
+		A7A737A220D2563A0049FEF1 /* Demo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A737A120D2563A0049FEF1 /* Demo5ViewController.m */; };
 		A7D73EAA20BD937300BD0DC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EA920BD937300BD0DC3 /* AppDelegate.m */; };
 		A7D73EAD20BD937300BD0DC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EAC20BD937300BD0DC3 /* ViewController.m */; };
 		A7D73EB020BD937300BD0DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D73EAE20BD937300BD0DC3 /* Main.storyboard */; };
@@ -65,6 +66,8 @@
 		A7A7379C20D002600049FEF1 /* UIView+MNFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MNFrame.h"; sourceTree = "<group>"; };
 		A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MNFrame.m"; sourceTree = "<group>"; };
 		A7A7379F20D250F30049FEF1 /* MNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNKit.h; sourceTree = "<group>"; };
+		A7A737A020D2563A0049FEF1 /* Demo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo5ViewController.h; sourceTree = "<group>"; };
+		A7A737A120D2563A0049FEF1 /* Demo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo5ViewController.m; sourceTree = "<group>"; };
 		A7D73EA520BD937300BD0DC3 /* MNKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D73EA820BD937300BD0DC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7D73EA920BD937300BD0DC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -193,8 +196,6 @@
 		A7D73EBF20BD939B00BD0DC3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A72BA55120C03D36005073B9 /* MNSVProgressClass.h */,
-				A72BA55220C03D37005073B9 /* MNSVProgressClass.m */,
 				A72BA53920C03898005073B9 /* UIView+controller.h */,
 				A72BA53820C03898005073B9 /* UIView+controller.m */,
 				A7D73EF820C02F0D00BD0DC3 /* UIImage+Original.h */,
@@ -214,6 +215,8 @@
 		A7D73EC020BD939B00BD0DC3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A72BA55120C03D36005073B9 /* MNSVProgressClass.h */,
+				A72BA55220C03D37005073B9 /* MNSVProgressClass.m */,
 				A72BA53B20C0390B005073B9 /* MNCheakTools.h */,
 				A72BA53C20C0390B005073B9 /* MNCheakTools.m */,
 			);
@@ -273,6 +276,8 @@
 				A7D73EFC20C02F7B00BD0DC3 /* Demo3ViewController.m */,
 				A72BA53E20C03919005073B9 /* Demo4ViewController.h */,
 				A72BA53F20C03919005073B9 /* Demo4ViewController.m */,
+				A7A737A020D2563A0049FEF1 /* Demo5ViewController.h */,
+				A7A737A120D2563A0049FEF1 /* Demo5ViewController.m */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				A7D73EE520BD96F100BD0DC3 /* NSArray+MASAdditions.m in Sources */,
 				A72BA54E20C03C64005073B9 /* SVProgressHUD.m in Sources */,
 				A7D73EE120BD96F100BD0DC3 /* ViewController+MASAdditions.m in Sources */,
+				A7A737A220D2563A0049FEF1 /* Demo5ViewController.m in Sources */,
 				A7D73EF120BED6AB00BD0DC3 /* Demo2ViewController.m in Sources */,
 				A7D73EE220BD96F100BD0DC3 /* MASCompositeConstraint.m in Sources */,
 				A7D73EEE20BD973900BD0DC3 /* Demo1ViewController.m in Sources */,

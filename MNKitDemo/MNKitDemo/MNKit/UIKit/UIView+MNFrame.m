@@ -76,13 +76,13 @@
     return self.frame.size;
 }
 
-- (void)setMn_size:(CGSize)mn_viewSize{
+- (void)setMn_viewSize:(CGSize)mn_viewSize{
     CGRect frame = self.frame;
     frame.size = mn_viewSize;
     self.frame = frame;
 }
 
-- (void)setMn_origin:(CGPoint)mn_viewOrigin{
+- (void)setMn_viewOrigin:(CGPoint)mn_viewOrigin{
     CGRect frame = self.frame;
     frame.origin = mn_viewOrigin;
     self.frame = frame;

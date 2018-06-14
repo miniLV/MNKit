@@ -21,6 +21,7 @@
     }
 }
 
+//基础设置 && 多少秒后隐藏
 +  (void)setSVDuration:(CGFloat)time{
     
     //设置标题颜色
@@ -29,13 +30,13 @@
     //设置背景色
     [SVProgressHUD setBackgroundColor:[UIColor darkGrayColor]];
     
-    //1.5s后消失
+    //n秒后消失
     [SVProgressHUD dismissWithDelay:time];
     
     //消失动画(1S)
     [SVProgressHUD setFadeOutAnimationDuration:1.0];
 
-    //禁止用户交互
+    //如果响应时间>3s 禁止用户交互
     if(time >= 3){
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     }else{
@@ -47,7 +48,6 @@
 
     [self setSVDuration:1.5];
 }
-
 
 
 + (void)longTimeSetting{
@@ -72,18 +72,7 @@
 }
 
 
-
-+(void)showWithStatus:(NSString *)string{
-    
-    [self defaultSetting];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [SVProgressHUD showWithStatus:string];
-        
-        [SVProgressHUD dismissWithDelay:1.0];
-    });
-}
+#pragma mark - NormalTitle
 
 ///只显示一个最简单的label
 + (void)showNormalTitle:(NSString *)titleStr{
@@ -92,8 +81,6 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD showImage:nil status:titleStr];
-        
-        [SVProgressHUD dismissWithDelay:1.0];
     });
     
     
@@ -105,8 +92,6 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD showImage:nil status:titleStr];
-        
-        [SVProgressHUD dismissWithDelay:1.0];
     });
 }
 
@@ -121,20 +106,15 @@
     });
 }
 
-+ (void)show10STimeStatus:(NSString *)string{
-    
-    [self setSVDuration:10];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showWithStatus:string];
-    });
-}
 
-+ (void)showLongTimeStatus:(NSString *)string{
+#pragma mark - show Status
+
++(void)showWithStatus:(NSString *)string{
     
-    [self longTimeSetting];
+    [self defaultSetting];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
         [SVProgressHUD showWithStatus:string];
     });
 }
@@ -144,6 +124,25 @@
     [self setSVDuration:2.5];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
+        [SVProgressHUD showWithStatus:string];
+    });
+}
+
++ (void)mn_show10STimeStatus:(NSString *)string{
+    
+    [self setSVDuration:10];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [SVProgressHUD showWithStatus:string];
+    });
+}
+
+///显示转圈圈状态(不会主动消失)
++ (void)showLongTimeStatus:(NSString *)string{
+    
+    [self longTimeSetting];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD showWithStatus:string];
     });
 }
@@ -159,7 +158,7 @@
 
 
 + (void)mn_showSuccess:(NSString *)string{
-    [self setSVDuration:3.5];
+    [self setSVDuration:2.5];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [SVProgressHUD showSuccessWithStatus:string];

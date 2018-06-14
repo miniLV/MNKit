@@ -55,7 +55,8 @@ UITableViewDataSource
     self.datas = @[@"Demo1 - MNButton",
                    @"Demo2 - MNLabel",
                    @"Demo3 - UIImage+Original",
-                   @"Demo4 - MNCheakTools"];
+                   @"Demo4 - MNCheakTools",
+                   @"Demo5 - MNSVProgress"];
     [_tableView reloadData];
 }
 
