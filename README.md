@@ -49,7 +49,7 @@ UIButton *starBtn = [MNButton buttonWithBackgroundImage:starImage
 
 ---
 
-####MNLabel
+#### MNLabel
 ```
 //快速设置内容，文字颜色，字体大小，父控件
 [MNLabel mn_labelWithTitle:@"test-label1"
@@ -57,3 +57,5 @@ UIButton *starBtn = [MNButton buttonWithBackgroundImage:starImage
                      color:[UIColor lightGrayColor]
                 parentView:self.view];
 ```
+
+[详细说明](https://www.jianshu.com/p/2c2fb7ce634f)
