@@ -7,22 +7,51 @@
 //
 
 #import "MNSVProgressClass.h"
+#import "UIImage+GIFImage.h"
+#import "MNDefineConst.h"
+
 @implementation MNSVProgressClass
 
 
 + (void)mn_dismiss{
     
-    if ([SVProgressHUD isVisible]) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [SVProgressHUD dismissWithDelay:1.0];
-        
-        //消失动画(1S)
-        [SVProgressHUD setFadeOutAnimationDuration:1.0];
-    }
+        if ([SVProgressHUD isVisible]) {
+            
+            [SVProgressHUD dismissWithDelay:0.8];
+            
+            //消失动画(1S)
+            [SVProgressHUD setFadeOutAnimationDuration:0.8];
+            
+        }
+    });
+    
 }
 
++ (void)mn_dismissWithCompletion:(SVProgressHUDDismissCompletion)completion{
+    
+    //消失动画(1S)
+    [SVProgressHUD setFadeOutAnimationDuration:1.0];
+    
+    [SVProgressHUD dismissWithCompletion:completion];
+}
+
+
+
+
 //基础设置 && 多少秒后隐藏
-+  (void)setSVDuration:(CGFloat)time{
+
++ (void)setSVDuration:(CGFloat)timer{
+    //默认都可以点击
+    [self basic_setSVDuration:timer canTouch:YES];
+}
+
++  (void)basic_setSVDuration:(CGFloat)time canTouch:(BOOL)canTouch{
+    
+    if ([SVProgressHUD isVisible]) {
+        return;
+    }
     
     //设置标题颜色
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
@@ -35,41 +64,31 @@
     
     //消失动画(1S)
     [SVProgressHUD setFadeOutAnimationDuration:1.0];
-
+    
+    
+    [SVProgressHUD setImageViewSize:CGSizeMake(28,28)];
+    
+    if (canTouch || time < 3.0) {
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+        return;
+    }
     //如果响应时间>3s 禁止用户交互
     if(time >= 3){
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     }else{
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
     }
 }
 
 + (void)defaultSetting{
-
-    [self setSVDuration:1.5];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self setSVDuration:1.5];
+    });
 }
 
 
-+ (void)longTimeSetting{
-
-    [self longTimeSettingWithTouch:NO];
-}
-
-+ (void)longTimeSettingWithTouch:(BOOL)canTouch{
-    //设置标题颜色
-    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    
-    //设置背景色
-    [SVProgressHUD setBackgroundColor:[UIColor darkGrayColor]];
-    
-    //消失动画(1S)
-    [SVProgressHUD setFadeOutAnimationDuration:1.0];
-    
-    //禁止用户交互
-    if (!canTouch) {
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    }
-}
 
 
 #pragma mark - NormalTitle
@@ -77,14 +96,18 @@
 ///只显示一个最简单的label
 + (void)showNormalTitle:(NSString *)titleStr{
     
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+    
     [self defaultSetting];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD showImage:nil status:titleStr];
     });
-    
-    
 }
+
+
 
 + (void)show3SNormalTitle:(NSString *)titleStr{
     
@@ -95,70 +118,13 @@
     });
 }
 
-+ (void)show5SNormalTitle:(NSString *)titleStr{
-    
-    [self setSVDuration:5];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showImage:nil status:titleStr];
-        
-        [SVProgressHUD dismissWithDelay:1.0];
-    });
-}
-
 
 #pragma mark - show Status
 
-+(void)showWithStatus:(NSString *)string{
-    
-    [self defaultSetting];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [SVProgressHUD showWithStatus:string];
-    });
-}
-
-+ (void)mn_show2sTimeStatus:(NSString *)string{
-    
-    [self setSVDuration:2.5];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [SVProgressHUD showWithStatus:string];
-    });
-}
-
-+ (void)mn_show10STimeStatus:(NSString *)string{
-    
-    [self setSVDuration:10];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showWithStatus:string];
-    });
-}
-
-///显示转圈圈状态(不会主动消失)
-+ (void)showLongTimeStatus:(NSString *)string{
-    
-    [self longTimeSetting];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showWithStatus:string];
-    });
-}
-
-+ (void)showLongTimeStatus:(NSString *)string canTouch:(BOOL)canTouch{
-    
-    [self longTimeSettingWithTouch:canTouch];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showWithStatus:string];
-    });
-}
 
 
 + (void)mn_showSuccess:(NSString *)string{
-    [self setSVDuration:2.5];
+    [self setSVDuration:2.0];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [SVProgressHUD showSuccessWithStatus:string];
@@ -170,16 +136,44 @@
 + (BOOL)isValueNilWithSVTips:(NSString *)tipStr key:(NSString *)key{
     
     if (!key || key.length == 0) {
-
+        
         [MNSVProgressClass showNormalTitle:tipStr];
         return YES;
     }
     return NO;
 }
 
-+ (void)mn_normalShowLoading{
+///显示加载中的gif图片
++ (void)p_showLoadingGifWithTouch:(BOOL)canTouch{
     
-    [self showLongTimeStatus:@"正在加载中，请稍后..." canTouch:YES];
+    [self p_showGifImage:@"pageload_1" duration:20 width:MNRationW(400) height:MNRationW(400) canTouch:canTouch];
+}
+
++ (void)p_showGifImage:(NSString *)imageName duration:(double)duration width:(CGFloat)width height:(CGFloat)height canTouch:(BOOL)canTouch{
+    
+    if ([SVProgressHUD isVisible]) {
+        [SVProgressHUD dismiss];
+    }
+    
+    [self setSVDuration:duration];
+    //设置背景色
+    [SVProgressHUD setBackgroundColor:[UIColor clearColor]];
+    [SVProgressHUD showImage:[UIImage imageWithGIFNamed:imageName] status:nil];
+    [SVProgressHUD setImageViewSize:CGSizeMake(width, height)];
+    [SVProgressHUD setFadeOutAnimationDuration:0.1];
+    
+    
+    if (!canTouch) {
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    }
+    else{
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+    }
+}
+
++ (void)showLoading{
+    
+    [self p_showLoadingGifWithTouch:YES];
 }
 
 
