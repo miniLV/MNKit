@@ -8,7 +8,7 @@
 
 #import "Demo5ViewController.h"
 #import "MNSVProgressClass.h"
-#import "MNButton.h"
+#import "UIButton+MNButton.h"
 @interface Demo5ViewController ()
 
 @end

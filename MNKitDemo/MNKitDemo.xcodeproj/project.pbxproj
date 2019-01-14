@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		582303B321EC29440039C41D /* UILabel+MNLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 582303B221EC29440039C41D /* UILabel+MNLabel.m */; };
+		582303B721EC370E0039C41D /* UIButton+MNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 582303B621EC370E0039C41D /* UIButton+MNButton.m */; };
 		A72BA53A20C03898005073B9 /* UIView+controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA53820C03898005073B9 /* UIView+controller.m */; };
 		A72BA53D20C0390B005073B9 /* MNCheakTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA53C20C0390B005073B9 /* MNCheakTools.m */; };
 		A72BA54020C03919005073B9 /* Demo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A72BA53F20C03919005073B9 /* Demo4ViewController.m */; };
@@ -25,7 +26,6 @@
 		A7D73EB220BD937400BD0DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D73EB120BD937400BD0DC3 /* Assets.xcassets */; };
 		A7D73EB520BD937400BD0DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D73EB320BD937400BD0DC3 /* LaunchScreen.storyboard */; };
 		A7D73EB820BD937400BD0DC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EB720BD937400BD0DC3 /* main.m */; };
-		A7D73EC320BD941700BD0DC3 /* MNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EC220BD941700BD0DC3 /* MNButton.m */; };
 		A7D73EE020BD96F100BD0DC3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73EC720BD96F100BD0DC3 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		A7D73EE120BD96F100BD0DC3 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73ED020BD96F100BD0DC3 /* ViewController+MASAdditions.m */; };
 		A7D73EE220BD96F100BD0DC3 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D73ED420BD96F100BD0DC3 /* MASCompositeConstraint.m */; };
@@ -46,6 +46,8 @@
 		582303B121EC29440039C41D /* UILabel+MNLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MNLabel.h"; sourceTree = "<group>"; };
 		582303B221EC29440039C41D /* UILabel+MNLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MNLabel.m"; sourceTree = "<group>"; };
 		582303B421EC33220039C41D /* MNDefineConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNDefineConst.h; sourceTree = "<group>"; };
+		582303B521EC370E0039C41D /* UIButton+MNButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+MNButton.h"; sourceTree = "<group>"; };
+		582303B621EC370E0039C41D /* UIButton+MNButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MNButton.m"; sourceTree = "<group>"; };
 		A72BA53820C03898005073B9 /* UIView+controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+controller.m"; sourceTree = "<group>"; };
 		A72BA53920C03898005073B9 /* UIView+controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+controller.h"; sourceTree = "<group>"; };
 		A72BA53B20C0390B005073B9 /* MNCheakTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCheakTools.h; sourceTree = "<group>"; };
@@ -79,8 +81,6 @@
 		A7D73EB420BD937400BD0DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D73EB620BD937400BD0DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D73EB720BD937400BD0DC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A7D73EC120BD941700BD0DC3 /* MNButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNButton.h; sourceTree = "<group>"; };
-		A7D73EC220BD941700BD0DC3 /* MNButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNButton.m; sourceTree = "<group>"; };
 		A7D73EC620BD96F100BD0DC3 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		A7D73EC720BD96F100BD0DC3 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		A7D73EC820BD96F100BD0DC3 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -198,12 +198,12 @@
 				A72BA53820C03898005073B9 /* UIView+controller.m */,
 				A7D73EF820C02F0D00BD0DC3 /* UIImage+Original.h */,
 				A7D73EF920C02F0D00BD0DC3 /* UIImage+Original.m */,
-				A7D73EC120BD941700BD0DC3 /* MNButton.h */,
-				A7D73EC220BD941700BD0DC3 /* MNButton.m */,
 				A7A7379C20D002600049FEF1 /* UIView+MNFrame.h */,
 				A7A7379D20D002600049FEF1 /* UIView+MNFrame.m */,
 				582303B121EC29440039C41D /* UILabel+MNLabel.h */,
 				582303B221EC29440039C41D /* UILabel+MNLabel.m */,
+				582303B521EC370E0039C41D /* UIButton+MNButton.h */,
+				582303B621EC370E0039C41D /* UIButton+MNButton.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -353,7 +353,6 @@
 				A72BA54D20C03C64005073B9 /* SVProgressAnimatedView.m in Sources */,
 				A7D73EE820BD96F100BD0DC3 /* MASViewConstraint.m in Sources */,
 				A7D73EE920BD96F100BD0DC3 /* MASViewAttribute.m in Sources */,
-				A7D73EC320BD941700BD0DC3 /* MNButton.m in Sources */,
 				A7D73EAD20BD937300BD0DC3 /* ViewController.m in Sources */,
 				A72BA53A20C03898005073B9 /* UIView+controller.m in Sources */,
 				A7D73EE520BD96F100BD0DC3 /* NSArray+MASAdditions.m in Sources */,
@@ -368,6 +367,7 @@
 				A72BA53D20C0390B005073B9 /* MNCheakTools.m in Sources */,
 				A7D73EE620BD96F100BD0DC3 /* View+MASAdditions.m in Sources */,
 				A72BA55320C03D37005073B9 /* MNSVProgressClass.m in Sources */,
+				582303B721EC370E0039C41D /* UIButton+MNButton.m in Sources */,
 				A7D73EE320BD96F100BD0DC3 /* MASConstraintMaker.m in Sources */,
 				A7D73EE720BD96F100BD0DC3 /* MASConstraint.m in Sources */,
 				A7D73EE020BD96F100BD0DC3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
