@@ -1,0 +1,16 @@
+//
+//  MNKitDemo.pch
+//  MNKitDemo
+//
+//  Created by TB-Mac-107 on 2019/1/14.
+//  Copyright © 2019年 梁宇航. All rights reserved.
+//
+
+#ifndef MNKitDemo_pch
+#define MNKitDemo_pch
+
+#import "MNKit.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MNKitDemo_pch */

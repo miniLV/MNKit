@@ -11,18 +11,21 @@
 
 @interface MNSVProgressClass : NSObject
 
-+ (void)mn_dismiss;
++ (void)dismiss;
 
-+ (void)mn_dismissWithCompletion:(SVProgressHUDDismissCompletion)completion;
++ (void)dismissWithCompletion:(SVProgressHUDDismissCompletion)completion;
 
 ///只显示一个最简单的label(1.5s)
 + (void)showNormalTitle:(NSString *)titleStr;
 
-//显示一个3S最简单的label
-+ (void)show3SNormalTitle:(NSString *)titleStr;
+//显示一个N秒最简单的label
++ (void)showNormalTitle:(NSString *)titleStr showTime:(NSInteger)time;
 
-///10s的转圈圈
-+ (void)mn_showSuccess:(NSString *)string;
+//显示一个加载转圈圈
++ (void)showStatus:(NSString *)title time:(NSInteger)time;
+
+//提示成功
++ (void)showSuccess:(NSString *)string;
 
 ///默认显示-正在加载中（可以交互）
 + (void)showLoading;

@@ -53,6 +53,7 @@
 		582303B821EC5E880039C41D /* UIImage+GIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIFImage.h"; sourceTree = "<group>"; };
 		582303B921EC5E880039C41D /* UIImage+GIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIFImage.m"; sourceTree = "<group>"; };
 		582303BC21EC61710039C41D /* pageload_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pageload_1.gif; sourceTree = "<group>"; };
+		582303BE21EC62560039C41D /* MNKitDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNKitDemo.pch; sourceTree = "<group>"; };
 		A72BA53820C03898005073B9 /* UIView+controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+controller.m"; sourceTree = "<group>"; };
 		A72BA53920C03898005073B9 /* UIView+controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+controller.h"; sourceTree = "<group>"; };
 		A72BA53B20C0390B005073B9 /* MNCheakTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCheakTools.h; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 				A7D73EB320BD937400BD0DC3 /* LaunchScreen.storyboard */,
 				A7D73EB620BD937400BD0DC3 /* Info.plist */,
 				A7D73EB720BD937400BD0DC3 /* main.m */,
+				582303BE21EC62560039C41D /* MNKitDemo.pch */,
 			);
 			path = MNKitDemo;
 			sourceTree = "<group>";
@@ -539,6 +541,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB959EVT9H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MNKitDemo/MNKitDemo.pch;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -556,6 +560,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YB959EVT9H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MNKitDemo/MNKitDemo.pch;
 				INFOPLIST_FILE = MNKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

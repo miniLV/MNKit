@@ -13,7 +13,7 @@
 @implementation MNSVProgressClass
 
 
-+ (void)mn_dismiss{
++ (void)dismiss{
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -29,7 +29,7 @@
     
 }
 
-+ (void)mn_dismissWithCompletion:(SVProgressHUDDismissCompletion)completion{
++ (void)dismissWithCompletion:(SVProgressHUDDismissCompletion)completion{
     
     //消失动画(1S)
     [SVProgressHUD setFadeOutAnimationDuration:1.0];
@@ -41,16 +41,15 @@
 
 
 //基础设置 && 多少秒后隐藏
-
-+ (void)setSVDuration:(CGFloat)timer{
++ (void)setSVDuration:(CGFloat)time{
     //默认都可以点击
-    [self basic_setSVDuration:timer canTouch:YES];
+    [self basic_setSVDuration:time canTouch:YES];
 }
 
 +  (void)basic_setSVDuration:(CGFloat)time canTouch:(BOOL)canTouch{
     
     if ([SVProgressHUD isVisible]) {
-        return;
+        [SVProgressHUD dismiss];
     }
     
     //设置标题颜色
@@ -64,7 +63,6 @@
     
     //消失动画(1S)
     [SVProgressHUD setFadeOutAnimationDuration:1.0];
-    
     
     [SVProgressHUD setImageViewSize:CGSizeMake(28,28)];
     
@@ -80,54 +78,70 @@
     }
 }
 
-+ (void)defaultSetting{
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self setSVDuration:1.5];
-    });
-}
-
-
-
-
 #pragma mark - NormalTitle
 
 ///只显示一个最简单的label
 + (void)showNormalTitle:(NSString *)titleStr{
     
     if ([SVProgressHUD isVisible]) {
-        [SVProgressHUD dismiss];
+        return;
     }
     
-    [self defaultSetting];
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showImage:nil status:titleStr];
+        if (![SVProgressHUD isVisible]){
+            [self setSVDuration:1.5];
+            [SVProgressHUD showImage:nil status:titleStr];
+        }
     });
 }
 
 
 
-+ (void)show3SNormalTitle:(NSString *)titleStr{
++ (void)showNormalTitle:(NSString *)titleStr showTime:(NSInteger)time{
     
-    [self setSVDuration:3];
+    if ([SVProgressHUD isVisible]) {
+        return;
+    }
+    
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD showImage:nil status:titleStr];
+        
+        if (![SVProgressHUD isVisible]) {
+            [self setSVDuration:time];
+            [SVProgressHUD showImage:nil status:titleStr];
+        }
     });
 }
 
 
 #pragma mark - show Status
-
-
-
-+ (void)mn_showSuccess:(NSString *)string{
-    [self setSVDuration:2.0];
+//显示一个加载转圈圈
++ (void)showStatus:(NSString *)titleStr time:(NSInteger)time{
+    if ([SVProgressHUD isVisible]) {
+        return;
+    }
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [SVProgressHUD showSuccessWithStatus:string];
+        if (![SVProgressHUD isVisible]) {
+            [self setSVDuration:time];
+            [SVProgressHUD showWithStatus:titleStr];
+        }
+    });
+}
+
+
++ (void)showSuccess:(NSString *)string{
+    if ([SVProgressHUD isVisible]) {
+        return;
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        if (![SVProgressHUD isVisible]) {
+            [self setSVDuration:2.0];
+            [SVProgressHUD showSuccessWithStatus:string];
+        }
     });
 }
 
@@ -136,8 +150,9 @@
 + (BOOL)isValueNilWithSVTips:(NSString *)tipStr key:(NSString *)key{
     
     if (!key || key.length == 0) {
-        
-        [MNSVProgressClass showNormalTitle:tipStr];
+        if (![SVProgressHUD isVisible]) {
+            [MNSVProgressClass showNormalTitle:tipStr];
+        }
         return YES;
     }
     return NO;
@@ -152,7 +167,7 @@
 + (void)p_showGifImage:(NSString *)imageName duration:(double)duration width:(CGFloat)width height:(CGFloat)height canTouch:(BOOL)canTouch{
     
     if ([SVProgressHUD isVisible]) {
-        [SVProgressHUD dismiss];
+        return;
     }
     
     [self setSVDuration:duration];

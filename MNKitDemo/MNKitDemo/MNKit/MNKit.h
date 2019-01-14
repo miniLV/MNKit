@@ -12,9 +12,8 @@
 
 
 
-#import "MNButton.h"
+#import "UIButton+MNButton.h"
 #import "UILabel+MNLabel.h"
-#import "UILabel+Utils.h"
 #import "UIImage+Original.h"
 #import "UIView+controller.h"
 #import "UIView+MNFrame.h"

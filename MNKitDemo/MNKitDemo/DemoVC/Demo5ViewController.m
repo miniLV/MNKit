@@ -44,7 +44,7 @@
     
     //2.10s转圈圈自动消失提示框
     UIButton *btn2 = [[UIButton alloc]init];
-    [btn2 setTitle:@"3s转圈圈自动消失提示框" forState:UIControlStateNormal];
+    [btn2 setTitle:@"10s title自动消失提示框" forState:UIControlStateNormal];
     btn2.frame = CGRectMake(50, 280, 250, 50);
     [self.view addSubview:btn2];
     [btn2 setBackgroundColor:[UIColor lightGrayColor]];
@@ -61,30 +61,27 @@
     //4.操作成功提示框
     UIButton *btn4 = [[UIButton alloc]init];
     [btn4 setTitle:@"显示加载gif图片动画" forState:UIControlStateNormal];
-    btn4.frame = CGRectMake(50, 380, 250, 50);
+    btn4.frame = CGRectMake(50, 480, 250, 50);
     [self.view addSubview:btn4];
     [btn4 setBackgroundColor:[UIColor lightGrayColor]];
     [btn4 addTarget:self action:@selector(p_clickBtn4) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)p_clickBtn0{
-    [MNSVProgressClass show3SNormalTitle:@"只有文字的提示框"];
+    [MNSVProgressClass showNormalTitle:@"只有文字的提示框"];
 }
 
 - (void)p_clickBtn1{
     
-    [SVProgressHUD showWithStatus:@"加载中..."];
-    
-    //需要手动设置miss
-    [SVProgressHUD dismissWithDelay:3.0];
+    [MNSVProgressClass showStatus:@"加载中..." time:10];
 }
 
 - (void)p_clickBtn2{
-    [MNSVProgressClass show3SNormalTitle:@"3s转圈圈自动消失提示框"];
+    [MNSVProgressClass showNormalTitle:@"10s title自动消失提示框" showTime:10];
 }
 
 - (void)p_clickBtn3{
-    [MNSVProgressClass mn_showSuccess:@"操作成功"];
+    [MNSVProgressClass showSuccess:@"操作成功"];
 }
 
 - (void)p_clickBtn4{
