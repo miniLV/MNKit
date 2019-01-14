@@ -10,8 +10,10 @@
 #ifndef MNKit_h
 #define MNKit_h
 
+
+
 #import "MNButton.h"
-#import "MNLabel.h"
+#import "UILabel+MNLabel.h"
 #import "UILabel+Utils.h"
 #import "UIImage+Original.h"
 #import "UIView+controller.h"
