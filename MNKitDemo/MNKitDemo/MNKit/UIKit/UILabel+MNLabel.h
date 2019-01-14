@@ -55,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
                       lineSpacing:(CGFloat)lineSpacing
                        parentView:(UIView *)parentView;
 
+#pragma mark - 等比例缩放设置
+
+
 
 #pragma mark - setLineSpacing
 - (void)setLineSpacing:(CGFloat)lineSpacing;

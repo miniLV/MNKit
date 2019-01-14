@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		582303B121EC29440039C41D /* UILabel+MNLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MNLabel.h"; sourceTree = "<group>"; };
 		582303B221EC29440039C41D /* UILabel+MNLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MNLabel.m"; sourceTree = "<group>"; };
+		582303B421EC33220039C41D /* MNDefineConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNDefineConst.h; sourceTree = "<group>"; };
 		A72BA53820C03898005073B9 /* UIView+controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+controller.m"; sourceTree = "<group>"; };
 		A72BA53920C03898005073B9 /* UIView+controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+controller.h"; sourceTree = "<group>"; };
 		A72BA53B20C0390B005073B9 /* MNCheakTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCheakTools.h; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 				A7D73EC020BD939B00BD0DC3 /* Foundation */,
 				A7D73EBF20BD939B00BD0DC3 /* UIKit */,
 				A7A7379F20D250F30049FEF1 /* MNKit.h */,
+				582303B421EC33220039C41D /* MNDefineConst.h */,
 			);
 			path = MNKit;
 			sourceTree = "<group>";

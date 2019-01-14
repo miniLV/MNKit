@@ -20,5 +20,6 @@
 #import "UIView+MNFrame.h"
 #import "MNSVProgressClass.h"
 #import "MNCheakTools.h"
+#import "MNDefineConst.h"
 
 #endif /* MNKit_h */
